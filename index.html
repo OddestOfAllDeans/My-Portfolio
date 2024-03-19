@@ -6,6 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
 </head>
 <body>
@@ -53,10 +57,13 @@
 </header>
 <!-- Header end -->
 <!-- Hero Section Start -->
-<section id="home" class="pt-36 pl-5">
+<section id="home" class="pt-16 pl-5">
     <div class="container">
         <div class="flex flex-wrap items-center">
-            <div class="w-full self-center px-4 lg:w-1/2 lg:order-2">
+            <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0" data-aos-duration="1600" class="w-full self-center px-4 lg:w-1/2 lg:order-2">
                 <h1 class="text-base font-semibold font-poppins md:text-xl lg:text-2xl"><span class="text-hero font-semibold">Hey there friends! my name is...</span> <span class="block font-bold text-hero font-poppins text-4xl mt-1 lg:text-5xl">Muhammad Ali</span> <span class="block font-bold font-poppins text-hero text-4xl lg:text-5xl">Dean Baskoro Ajie!!</span></h1>
                 <h2 class="font-medium text-hero text-lg mb-5 font-poppins lg:text-2xl">Student of <span class="text-sky-600 font-bold">Vocational High School 2 Yogyakarta</span> & an Intern At <span class="text-violet-800 font-bold">Neutron Head Office</span></h2>
                 <p class="font-instrumentsans text-1xl font-medium leading-relaxed mb-10">Web Programming sure is hard, but being a failure is way harder, so keep going strong!</p>
@@ -89,12 +96,14 @@
 <section id="about" class="pt-36 pb-32 pl-16">    
     <div class="container">
         <div class="flex flex-wrap items-center">
-            <div class="w-full px-4 mb-10 lg:w-1/2">
+            <div data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom" data-aos-duration="1200" class="w-full px-4 mb-10 lg:w-1/2">
                 <h4 class="font-bold text-hero text-2xl mb-3 font-poppins">About Me</h4>
                 <h2 class="font-bold text-slate-900 text-3xl font-poppins mb-5 mr-12 max-w-md lg:text-4xl text-balance">You want to know things about me? ooooohh how interesting</h2>
                 <p class="font-instrumentsans max-w-xl lg:text-lg pb-5">I am an 18 year old student of Vocational High School 2 Yogyakarta and i am currently having an internship in Neutron's Head Office, i am learning many things, tho sometimes it tends to frustrate me how ridiculous my laptop's performance is, i am currently learning HTML and CSS, earlier i learned about the PHP programming languages, i am interested in learning Tailwind Css and that is what i used to make this website</p>
             </div>
-            <div class="w-full px-4 lg:w-1/2 mb-16 lg:pb-40">
+            <div data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom" data-aos-duration="700" class="w-full px-4 lg:w-1/2 mb-16 lg:pb-40">
                 <h3 class="text-hero font-poppins font-bold text-xl mb-4 lg:text-3xl pt-1 max-x-md">Lets Be Moots!</h3>
                 <p class="font-instrumentsans mb-6 max-w-xl lg:text-lg">Hey, after you coming into my website, might as well be mutuals right? who knows, we might become soulmates? I'm just kidding or am i?</p>
                 <div class="flex items-center">
@@ -122,40 +131,41 @@
 
 <div class="container">
     <div class="w-full px-4">
-        <div class="max-w-xl mx-auto text-center mb-16">
+        <div data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom" data-aos-duration="1200" class="max-w-xl mx-auto text-center mb-16">
             <h4 class="text-yellow-400 font-medium font-poppins text-lg mb-2">Portfolio</h4>
             <h2 class="font-bold font-poppins text-hero text-3xl mb-4">Latest Projects</h2>
             <p class="font-medium font-instrumentsans text-md text-ivory">Some of the lastest projects i've finished from last year, and i must say i'm happy i've gain many knowledge and have had many experience on my past projets so i could solve things quicker</p>
         </div>
     </div>
     <div class="w-full px-4 flex flex-wrap justify-center">
-        <div class="mb-12 p-4 md:w-1/2">
+        <div data-aos="fade-right" data-aos-duration="1200" class="mb-12 p-4 md:w-1/2">
             <div class="rounded-l-md rounded-r-lg shadow-2xl shadow-hero overflow-hidden">
-                <img  width="w-full" src="img/Chiny.PNG" alt="chiny">
+                <img  width="900" src="img/Chiny.PNG" alt="chiny">
             </div>
             <h3 class="font-semibold text-xl text-yellow-300 mt-5 mb-3 font-poppins">Chiny.Inc Honey Glazed Fried Chicken</h3>
             <p class="font-medium text-base text-ivory font-instrumentsans">A solo project that i made on my own, with the help of Youtube and ChatGPT, the main objective for the project was to learn while making the site and i have to say that learning this way worked for me and i'm happy the project turned out better than i expected</p>
         </div>
-        <div class="mb-12 p-4 md:w-1/2">
+        <div data-aos="fade-left" data-aos-duration="1200" class="mb-12 p-4 md:w-1/2">
             <div class="rounded-l-md rounded-r-lg shadow-2xl shadow-hero overflow-hidden">
                 <img  width="w-full" src="img/wallet.png" alt="wallet">
             </div>
             <h3 class="font-semibold text-xl text-yellow-300 mt-5 mb-3 font-poppins">Internet Of Things Smart Wallet</h3>
             <p class="font-medium text-base text-ivory font-instrumentsans">A project me and my best friend made, the whole project was mainly an assignment from his college, and he doesn't have any knowledge of IOT and he knew that i'm pretty good at it so he asked for my help, he bought the components needed and i put the whole thing together and coded everything too, he's experienced on Graphic Design so he made the mockup of the app and after the smart wallet was completed he had an A+ on his grade and i never felt smarter ever before he told the news</p>
         </div>
-        <div class="mb-12 p-4 md:w-1/2">
+        <div data-aos="fade-right" data-aos-duration="1200" class="mb-12 p-4 md:w-1/2">
             <div class="rounded-l-md rounded-r-lg shadow-2xl shadow-hero overflow-hidden">
-                <img  width="w-full" src="img/wallet.png" alt="">
+                <img  width="w-full" src="img/wefood.jpg" alt="">
             </div>
-            <h3 class="font-semibold text-xl text-yellow-300 mt-5 mb-3 font-poppins">Chiny.Inc Honey Glazed Fried Chicken</h3>
-            <p class="font-medium text-base text-ivory font-instrumentsans">A solo project that i made on my own, with the help of Youtube and ChatGPT, the main objective for the project was to learn while making the site and i have to say that learning this way worked for me and i'm happy the project turned out better than i expected</p>
+            <h3 class="font-semibold text-xl text-yellow-300 mt-5 mb-3 font-poppins">WeFood Free Food For Everyone</h3>
+            <p class="font-medium text-base text-ivory font-instrumentsans">A project my best friend and I embarked on was "WeFood," a web design initiative aimed at promoting healthy living. This project stemmed from his college assignment, and knowing my expertise in web development, he enlisted my help. The concept was simple yet impactful: users would engage in various healthy activities suggested by the website, such as walking a certain number of steps or trying new healthy recipes, to earn points redeemable for free food. While he focused on designing the user interface, I handled the coding and implementation of the website's functionalities. Upon completion, he received an outstanding grade for the project, and I was thrilled to have contributed to such a meaningful endeavor.</p>
         </div>
-        <div class="mb-12 p-4 md:w-1/2">
+        <div data-aos="fade-left" data-aos-duration="1200" class="mb-12 p-4 md:w-1/2">
             <div class="rounded-l-md rounded-r-lg shadow-2xl shadow-hero overflow-hidden">
-                <img  width="w-full" src="img/wallet.png" alt="">
+                <img  width="w-full" src="img/westechire.jpg" alt="">
             </div>
-            <h3 class="font-semibold text-xl text-yellow-300 mt-5 mb-3 font-poppins">Chiny.Inc Honey Glazed Fried Chicken</h3>
-            <p class="font-medium text-base text-ivory font-instrumentsans">A solo project that i made on my own, with the help of Youtube and ChatGPT, the main objective for the project was to learn while making the site and i have to say that learning this way worked for me and i'm happy the project turned out better than i expected</p>
+            <h3 class="font-semibold text-xl text-yellow-300 mt-5 mb-3 font-poppins">Westerchire</h3>
+            <p class="font-medium text-base text-ivory font-instrumentsans">I collaborated with the renowned IT company "Postponed" on a public web design project named "Westerchire," focusing on travel and exploration. The project aimed to create a platform where users could discover and plan their travel adventures, earning rewards for exploring new destinations or sharing travel tips. Recognizing my expertise in web development, Postponed enlisted my help for the coding and integration of the website's features. While their design team crafted the user interface, I worked on implementing the functionality. The project was a resounding success, offering a valuable resource for travel enthusiasts, and I was honored to have contributed to such a meaningful endeavor.</p>
         </div>
     </div>
 </div>
@@ -166,7 +176,7 @@
 
 <!-- Client start -->
 <section id="clients" class="pt-36 pb-32 bg-ivory">
-    <div class="container">
+    <div data-aos="zoom-in-up" data-aos-duration="2000" class="container">
         <div class="w-full px-4">
             <div class="mx-auto text-center mb-16">
                 <div class="mx-auto text-center mb-16">
@@ -288,7 +298,16 @@ hamburger.addEventListener('click', function() {
     hamburger.classList.toggle('hamburger-active');
     navMenu.classList.toggle('hidden');
 }) ;
+var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 800,
+    speedAsDuration: true
+})
+
 </script>
+
+<script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
