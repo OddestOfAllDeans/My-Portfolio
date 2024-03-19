@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.navbar-fixed {
+    @apply fixed z-[9999];
+}
+
+.hamburger-garis {
+ @apply w-[30px] h-[2px] my-2 block bg-hero;
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45;
+}
+
+header {
+    backdrop-filter: blur(10px);
+    transition: backdrop-filter 0.5s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header.nav-menu {
+    backdrop-filter: none;
+}
+
+.gradient-text {
+    background-image: linear-gradient(to right, #181D45, #6F4E87);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.gradient-texts {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(90deg, #FFD700, #FF6347, #1E90FF, #FF1493, #8A2BE2);
+    animation: animate-gradient 10s linear infinite;
+    transition: background-position 0.3s ease;
+}
+
+.gradient-texts:hover {
+    animation: none; /* Stop the background animation on hover */
+    background-position: 100% 100%; /* Set the background position to end of the gradient on hover */
+}
