@@ -221,23 +221,26 @@
                         <p class="font-medium font-instrumentsans text-md text-ivory">Contact me if you ever need to get a project done with a need of my help, or maybe you can contact me and be my friend if that is what you want, i'm also a great listener if you ever need a shoulder to cry on, anyways contact me if you ever need anything from me</p>
                     </div>
                 </div>
-                <form>
+                <form method="POST" class="form" id="form" name="form" action="message.php">
                     <div class="w-full lg:w-2/3 lg:mx-auto">
 
-                        <div class="w-full px-4 mb-8">
+                        <div class="w-full px-4 mb-8" name="name" method="POST" id="name" action="message.php">
                             <label for="name" class="text-lg font-bold font-poppins text-slate-400">Name</label>
-                <input type="text" id="name" class="w-full bg-slate-200 text-hero p-3 rounded-md focus:outline-none focus:ring-purple-400 focus:ring-2 focus:border-purple-400">
+                <input placeholder="Type your name here..." type="text" id="name" name="name" class="w-full bg-slate-200 text-hero p-3 rounded-md focus:outline-none focus:ring-purple-400 focus:ring-2 focus:border-purple-400">
             </div>
-            <div class="w-full px-4 mb-8">
+            <div class="w-full px-4 mb-8" name="email" method="POST" id="email" action="message.php">
                 <label for="email" class="text-lg font-bold font-poppins text-slate-400">Email</label>
-                <input type="email" id="email" class="w-full bg-slate-200 text-hero p-3 rounded-md focus:outline-none focus:ring-purple-400 focus:ring-2 focus:border-purple-400">
+                <input placeholder="Type your email here..." type="email" id="email" name="email" class="w-full bg-slate-200 text-hero p-3 rounded-md focus:outline-none focus:ring-purple-400 focus:ring-2 focus:border-purple-400">
             </div>
-            <div class="w-full px-4 mb-8">
+            <div method="POST" action="message.php" class="w-full px-4 mb-8" name="message" id="message">
                 <label for="message" class="text-lg font-bold font-poppins text-slate-400">Message for me</label>
-                <textarea type="email" id="email" class="w-full bg-slate-200 text-hero h-32 p-3 rounded-md focus:outline-none focus:ring-purple-400 focus:ring-2 focus:border-purple-400"></textarea>
+                <textarea placeholder="Type your message here..." type="text" id="message" name="message" class="w-full bg-slate-200 text-hero h-32 p-3 rounded-md focus:outline-none focus:ring-purple-400 focus:ring-2 focus:border-purple-400"></textarea>
             </div>
             <div class="w-full px-4">
-                <button class="text-base font-semibold text-white bg-hero font-poppins py-3 px-8 rounded-full w-full hover:bg-purple-600 hover:gradient-to-tr hover:shadow-lg transition duration-900">Send?</button>
+                <button class="text-base font-semibold text-white bg-hero font-poppins py-3 px-8 rounded-full w-full hover:bg-purple-600 hover:gradient-to-tr hover:shadow-lg transition duration-900 button-send">Send?</button>
+            </div>
+            <div method="POST" class="w-full px-4 send-text" name="send-text" id="send-text" action="message.php">
+                <p method="POST" name="teks" id="teks" action="message.php" class="font-poppins text-ivory text-lg mt-5 ml-5">The message you've wrote is being sent to meeee...</p>
             </div>
         </div>
         </form>
@@ -308,6 +311,34 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 <script>
     AOS.init();
   </script>
+
+
+<script>
+const form = document.querySelector("form");
+statusTxt = form.querySelector(".send-text p");
+
+form.onsubmit = (e)=>{
+e.preventDefault();
+statusTxt.style.display = "block";
+
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "message.php", true);
+xhr.onload = ()=> {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        let response = xhr.responseText;
+        console.log(response);
+        statusTxt.innerText = response;
+    }
+}
+let formData = new FormData(form);
+xhr.send(formData);
+
+
+}
+
+
+</script>
+
 
 </body>
 </html>
